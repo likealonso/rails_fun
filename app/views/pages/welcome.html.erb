@@ -1,7 +1,4 @@
-<h1>Rails Welcome</h1>
-
-<p>This is just a placeholder for an app built on Ruby on Rails</p>
-
-<p>This is just a placeholder for an app built on Ruby on Rails. This is just a placeholder for an app built on Ruby on Rails. This is just a placeholder for an app built on Ruby on Rails. This is just a placeholder for an app built on Ruby on Rails. This is just a placeholder for an app built on Ruby on Rails. This is just a placeholder for an app built on Ruby on Rails. </p>
-
-<%= link_to "My website", "http://alonsotacanga.com", target: "blank" %>
+<% @posts.each do |post| %>
+    <%= render 'posts/post', post: post %>
+    <br><br>
+<% end %>
