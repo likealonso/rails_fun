@@ -3,7 +3,12 @@
 </h2>
 
 <p>
-  <%= simple_format post.content %>
+    <% if post.kind === 'image' %>
+        <br>
+        <%= image_tag post.content, width:'100%' %>
+    <% else %>
+        <%= simple_format post.content %>
+    <% end %>
 </p>
 
 <p class='text-muted'>
